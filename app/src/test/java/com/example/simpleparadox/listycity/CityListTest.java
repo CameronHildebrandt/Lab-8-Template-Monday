@@ -93,4 +93,18 @@ class CityListTest {
 
         assertEquals(1, cityList.countCities());
     }
+
+    void testClearCities() {
+        CityList cityList = mockCityList();
+        cityList.add(new City("Victoria", "British Columbia"));
+        cityList.add(new City("Naniamo", "British Columbia"));
+        cityList.add(new City("Calgary", "Alberta"));
+        cityList.add(new City("Kalispell", "Montana"));
+
+        assertEquals(5, cityList.countCities());
+
+        cityList.clear();
+
+        assertEquals(0, cityList.countCities());
+    }
 }
